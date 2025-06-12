@@ -1,9 +1,9 @@
 <template>
-  <section class="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-700 relative overflow-hidden">
+  <section class="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-700 dark:from-blue-800 dark:via-purple-800 dark:to-blue-900 relative overflow-hidden transition-colors duration-500">
     <!-- Background decorations -->
-    <div class="absolute inset-0 bg-gradient-to-br from-blue-600/90 to-purple-600/90"></div>
-    <div class="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-    <div class="absolute bottom-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-600/90 to-purple-600/90 dark:from-blue-800/90 dark:to-purple-800/90"></div>
+    <div class="absolute top-0 left-0 w-96 h-96 bg-white/10 dark:bg-white/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-white/10 dark:bg-white/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
     
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -11,7 +11,7 @@
         <span class="block">construction management?</span>
       </h2>
       
-      <p class="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
+      <p class="text-xl text-blue-100 dark:text-blue-200 mb-10 max-w-3xl mx-auto">
         Join thousands of construction professionals who trust SiteWise to manage their materials, services, and sites efficiently.
       </p>
       
@@ -33,19 +33,19 @@
       
       <!-- Social proof -->
       <div class="mt-12 flex flex-wrap justify-center items-center gap-8 opacity-80">
-        <div class="flex items-center text-blue-100">
+        <div class="flex items-center text-blue-100 dark:text-blue-200">
           <Star class="w-5 h-5 text-yellow-400 mr-1" />
           <span class="font-medium">MIT Licensed</span>
         </div>
-        <div class="flex items-center text-blue-100">
+        <div class="flex items-center text-blue-100 dark:text-blue-200">
           <Users class="w-5 h-5 mr-2" />
           <span class="font-medium">Multi-User Ready</span>
         </div>
-        <div class="flex items-center text-blue-100">
+        <div class="flex items-center text-blue-100 dark:text-blue-200">
           <Globe class="w-5 h-5 mr-2" />
           <span class="font-medium">Multi-Lingual</span>
         </div>
-        <div class="flex items-center text-blue-100">
+        <div class="flex items-center text-blue-100 dark:text-blue-200">
           <Heart class="w-5 h-5 mr-2" />
           <span class="font-medium">Made in India</span>
         </div>

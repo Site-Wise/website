@@ -8,16 +8,15 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  @apply bg-gray-100 dark:bg-gray-800;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 4px;
+  @apply bg-gray-300 dark:bg-gray-600 rounded;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  @apply bg-gray-400 dark:bg-gray-500;
 }
 
 /* Smooth scrolling */
@@ -50,8 +49,20 @@ a:focus {
 
 /* Gradient text selection */
 ::selection {
-  background: #3b82f6;
-  color: white;
+  @apply bg-blue-600 text-white;
+}
+
+::-moz-selection {
+  @apply bg-blue-600 text-white;
+}
+
+/* Dark mode selection */
+.dark ::selection {
+  @apply bg-blue-500 text-white;
+}
+
+.dark ::-moz-selection {
+  @apply bg-blue-500 text-white;
 }
 
 /* Custom gradient backgrounds */
@@ -83,4 +94,27 @@ a:focus {
   .no-print {
     display: none !important;
   }
+}
+
+/* Dark mode transitions */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Ensure proper contrast in dark mode */
+.dark {
+  color-scheme: dark;
+}
+
+/* Custom dark mode utilities */
+.dark-gradient {
+  background: linear-gradient(135deg, #1e3a8a 0%, #581c87 100%);
+}
+
+/* Improved focus visibility in dark mode */
+.dark button:focus,
+.dark a:focus {
+  outline-color: #60a5fa;
 }
