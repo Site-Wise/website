@@ -4,10 +4,8 @@
       <div class="flex justify-between items-center h-16">
         <!-- Logo -->
         <div class="flex items-center space-x-2">
-          <div class="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-            <Building2 class="w-5 h-5 text-white" />
-          </div>
-          <span class="text-xl font-bold text-gray-900 dark:text-white">SiteWise</span>
+          <img src="/logo.png" alt="SiteWise Logo" class="w-8 h-8 rounded-lg" />
+          <!-- <span class="text-xl font-bold text-gray-900 dark:text-white">SiteWise</span> -->
         </div>
         
         <!-- Desktop Navigation -->
@@ -60,7 +58,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { Building2, Menu, X, Sun, Moon } from 'lucide-vue-next'
+import { Menu, X, Sun, Moon } from 'lucide-vue-next'
 import { useDarkMode } from '../composables/useDarkMode'
 
 const { isDark, toggleDarkMode } = useDarkMode()
