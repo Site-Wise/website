@@ -4,7 +4,7 @@
       <div class="flex justify-between items-center h-16">
         <!-- Logo -->
         <div class="flex items-center space-x-2">
-          <img src="/logo.png" alt="SiteWise Logo" class="w-8 h-8 rounded-lg" />
+          <img src="/logo.png" alt="SiteWise Logo" class="h-12 rounded-lg" />
           <!-- <span class="text-xl font-bold text-gray-900 dark:text-white">SiteWise</span> -->
         </div>
         

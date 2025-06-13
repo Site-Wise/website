@@ -5,7 +5,7 @@
         <!-- Brand -->
         <div class="col-span-1 md:col-span-2">
           <div class="flex items-center space-x-2 mb-4">
-            <img src="/logo.png" alt="SiteWise Logo" class="w-8 h-8 rounded-lg" />
+            <img src="/logo.png" alt="SiteWise Logo" class="h-12 rounded-lg" />
             <!-- <span class="text-xl font-bold">SiteWise</span> -->
           </div>
           <p class="text-gray-400 dark:text-gray-500 mb-6 max-w-md transition-colors duration-200">
