@@ -4,9 +4,10 @@
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
         <!-- Brand -->
         <div class="col-span-1 md:col-span-2">
-          <div class="flex items-center space-x-2 mb-4">
+          <div class="flex items-center mb-4">
             <img src="/logo.png" alt="SiteWise Logo" class="h-12 rounded-lg" />
-            <!-- <span class="text-xl font-bold">SiteWise</span> -->
+            <span class="ml-2 text-xl font-bold leading-tight text-white">Site</span>
+            <span class="text-xl font-bold leading-tight text-blue-600">Wise</span>
           </div>
           <p class="text-gray-400 dark:text-gray-500 mb-6 max-w-md transition-colors duration-200">
             Open source construction management app powered by lightweight PocketBase database. 

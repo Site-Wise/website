@@ -3,9 +3,10 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <!-- Logo -->
-        <div class="flex items-center space-x-2">
+        <div class="flex items-center">
           <img src="/logo.png" alt="SiteWise Logo" class="h-12 rounded-lg" />
-          <!-- <span class="text-xl font-bold text-gray-900 dark:text-white">SiteWise</span> -->
+          <span class="ml-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">Site</span>
+          <span class="text-xl font-bold leading-tight text-blue-600">Wise</span>
         </div>
         
         <!-- Desktop Navigation -->
