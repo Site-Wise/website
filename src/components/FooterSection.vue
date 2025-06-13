@@ -15,15 +15,15 @@
             Track materials, services, and manage multiple sites efficiently.
           </p>
           <div class="flex space-x-4">
-            <a href="https://github.com/sitewise/sitewise" class="text-gray-400 dark:text-gray-500 hover:text-white transition-colors duration-200" target="_blank" rel="noopener">
+            <a href="https://github.com/site-wise/app" class="text-gray-400 dark:text-gray-500 hover:text-white transition-colors duration-200" target="_blank" rel="noopener" aria-label="Visit SiteWise on GitHub">
               <Github class="w-6 h-6" />
             </a>
-            <a href="https://twitter.com/sitewise" class="text-gray-400 dark:text-gray-500 hover:text-white transition-colors duration-200" target="_blank" rel="noopener">
+            <!-- <a href="https://twitter.com/sitewise" class="text-gray-400 dark:text-gray-500 hover:text-white transition-colors duration-200" target="_blank" rel="noopener" aria-label="Follow SiteWise on Twitter">
               <Twitter class="w-6 h-6" />
             </a>
-            <a href="https://linkedin.com/company/sitewise" class="text-gray-400 dark:text-gray-500 hover:text-white transition-colors duration-200" target="_blank" rel="noopener">
+            <a href="https://linkedin.com/company/sitewise" class="text-gray-400 dark:text-gray-500 hover:text-white transition-colors duration-200" target="_blank" rel="noopener" aria-label="Connect with SiteWise on LinkedIn">
               <Linkedin class="w-6 h-6" />
-            </a>
+            </a> -->
           </div>
         </div>
         
@@ -33,9 +33,9 @@
           <ul class="space-y-2 text-gray-400 dark:text-gray-500">
             <li><a href="#features" class="hover:text-white transition-colors duration-200">Features</a></li>
             <li><a href="#pricing" class="hover:text-white transition-colors duration-200">Pricing</a></li>
-            <li><a href="/docs" class="hover:text-white transition-colors duration-200">Documentation</a></li>
-            <li><a href="/api" class="hover:text-white transition-colors duration-200">API Reference</a></li>
-            <li><a href="/changelog" class="hover:text-white transition-colors duration-200">Changelog</a></li>
+            <li><a href="https://github.com/site-wise/app/blob/main/USER_GUIDE.md" class="hover:text-white transition-colors duration-200" target="_blank" rel="noopener">Documentation</a></li>
+            <!-- <li><a href="/api" class="hover:text-white transition-colors duration-200">API Reference</a></li> -->
+            <li><a href="https://github.com/site-wise/app/blob/main/CHANGELOG.md" class="hover:text-white transition-colors duration-200" target="_blank" rel="noopener">Changelog</a></li>
           </ul>
         </div>
         
@@ -45,9 +45,9 @@
           <ul class="space-y-2 text-gray-400 dark:text-gray-500">
             <li><a href="/about" class="hover:text-white transition-colors duration-200">About</a></li>
             <li><a href="/blog" class="hover:text-white transition-colors duration-200">Blog</a></li>
-            <li><a href="/careers" class="hover:text-white transition-colors duration-200">Careers</a></li>
+            <!-- <li><a href="/careers" class="hover:text-white transition-colors duration-200">Careers</a></li> -->
             <li><a href="/contact" class="hover:text-white transition-colors duration-200">Contact</a></li>
-            <li><a href="/support" class="hover:text-white transition-colors duration-200">Support</a></li>
+            <!-- <li><a href="/support" class="hover:text-white transition-colors duration-200">Support</a></li> -->
           </ul>
         </div>
       </div>
@@ -60,7 +60,7 @@
         <div class="flex space-x-6 text-sm text-gray-400 dark:text-gray-500">
           <a href="/privacy" class="hover:text-white transition-colors duration-200">Privacy Policy</a>
           <a href="/terms" class="hover:text-white transition-colors duration-200">Terms of Service</a>
-          <a href="/license" class="hover:text-white transition-colors duration-200">MIT License</a>
+          <a href="https://github.com/site-wise/app/blob/main/LICENSE.md" class="hover:text-white transition-colors duration-200" target="_blank" rel="noopener">MIT License</a>
         </div>
       </div>
     </div>
@@ -68,5 +68,5 @@
 </template>
 
 <script setup lang="ts">
-import { Building2, Github, Twitter, Linkedin } from 'lucide-vue-next'
+import { Building2, Github } from 'lucide-vue-next'
 </script>

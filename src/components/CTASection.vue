@@ -16,19 +16,19 @@
       </p>
       
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <button class="group px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl hover:bg-gray-50 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl">
+        <button class="group px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl hover:bg-gray-50 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl" aria-label="Start free trial of SiteWise">
           <span class="flex items-center">
             Start Free Trial
             <ArrowRight class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
           </span>
         </button>
         
-        <button class="group px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:border-white/50 hover:bg-white/10 transition-all duration-200">
+        <a href="https://github.com/site-wise/app" target="_blank" rel="noopener" class="group px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:border-white/50 hover:bg-white/10 transition-all duration-200 inline-flex" aria-label="View SiteWise source code on GitHub">
           <span class="flex items-center">
             <Github class="w-5 h-5 mr-2" />
             View on GitHub
           </span>
-        </button>
+        </a>
       </div>
       
       <!-- Social proof -->
