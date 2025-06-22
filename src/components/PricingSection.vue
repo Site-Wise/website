@@ -42,13 +42,13 @@
               </li>
               <li class="flex items-center">
                 <Check class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                <span class="text-gray-600 dark:text-gray-300 transition-colors duration-200">Unlimited sites</span>
+                <span class="text-gray-600 dark:text-gray-300 transition-colors duration-200">Unlimited items, vendors, technicians</span>
               </li>
             </ul>
             
-            <button class="w-full px-6 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:border-gray-400 dark:hover:border-gray-500 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200">
-              Download Now
-            </button>
+            <a href="https://github.com/site-wise/app" class="w-full px-6 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:border-gray-400 dark:hover:border-gray-500 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 inline-block text-center">
+              Start using now!
+            </a>
           </div>
         </div>
         
@@ -63,7 +63,10 @@
           
           <div class="text-center">
             <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-2 transition-colors duration-200">SaaS</h3>
-            <div class="text-4xl font-bold text-gray-900 dark:text-white mb-1 transition-colors duration-200">$5</div>
+            <div class="mb-1 transition-colors duration-200">
+              <span class="text-lg text-gray-500 dark:text-gray-400 line-through">₹99</span>
+              <span class="text-4xl font-bold text-gray-900 dark:text-white ml-2">₹0</span>
+            </div>
             <div class="text-gray-600 dark:text-gray-400 mb-6 transition-colors duration-200">per month</div>
             
             <ul class="space-y-3 mb-8 text-left">
@@ -89,9 +92,9 @@
               </li>
             </ul>
             
-            <button class="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105">
+            <a href="https://app.sitewise.in/login" class="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 text-center inline-block">
               Start Free Trial
-            </button>
+            </a>
           </div>
         </div>
         
@@ -125,7 +128,7 @@
               </li>
             </ul>
             
-            <button class="w-full px-6 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:border-gray-400 dark:hover:border-gray-500 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200">
+            <button @click="openSalesModal" class="w-full px-6 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:border-gray-400 dark:hover:border-gray-500 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200">
               Contact Sales
             </button>
           </div>
@@ -155,9 +158,28 @@
         </div>
       </div>
     </div>
+    
+    <!-- Sales Modal -->
+    <ContactModal 
+      :is-open="isSalesModalOpen" 
+      type="sales" 
+      @close="closeSalesModal" 
+    />
   </section>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
 import { Check } from 'lucide-vue-next'
+import ContactModal from './ContactModal.vue'
+
+const isSalesModalOpen = ref(false)
+
+const openSalesModal = () => {
+  isSalesModalOpen.value = true
+}
+
+const closeSalesModal = () => {
+  isSalesModalOpen.value = false
+}
 </script>

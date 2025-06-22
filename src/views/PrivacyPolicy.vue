@@ -1,7 +1,5 @@
 <template>
-  <div class="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-500">
-    <NavHeader />
-    
+  <div>
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
         <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-8">Privacy Policy</h1>
@@ -124,7 +122,7 @@
             <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
               <p class="text-gray-700 dark:text-gray-300">
                 <strong>Grievance Officer:</strong> Data Protection Officer<br>
-                <strong>Email:</strong> privacy@sitewise.com<br>
+                <strong>Email:</strong> privacy@sitewise.in<br>
                 <strong>Response Time:</strong> We will acknowledge your complaint within 24 hours and resolve it within 30 days.
               </p>
             </div>
@@ -145,31 +143,28 @@
             <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
               <p class="text-gray-700 dark:text-gray-300">
                 <strong>SiteWise</strong><br>
-                Email: contact@sitewise.com<br>
-                Website: www.sitewise.com
+                Email: contact@sitewise.in<br>
+                Website: www.sitewise.in
               </p>
             </div>
           </section>
         </div>
 
         <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
-          <router-link 
+          <RouterLink 
             to="/" 
             class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200"
           >
             ← Back to Home
-          </router-link>
+          </RouterLink>
         </div>
       </div>
     </div>
-
-    <FooterSection />
   </div>
 </template>
 
 <script setup lang="ts">
-import NavHeader from './NavHeader.vue'
-import FooterSection from './FooterSection.vue'
+import { RouterLink } from 'vue-router'
 
 const effectiveDate = 'June 13, 2025'
 const lastUpdated = 'June 13, 2025'

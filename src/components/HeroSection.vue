@@ -50,12 +50,12 @@
         
         <!-- CTA buttons -->
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button class="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl" aria-label="Start free trial of SiteWise">
+          <a href="https://app.sitewise.in/login" class="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl inline-flex" aria-label="Start free trial of SiteWise">
             <span class="flex items-center">
               Start Free Trial
               <ArrowRight class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
             </span>
-          </button>
+          </a>
           
           <a href="https://github.com/site-wise/app" target="_blank" rel="noopener" class="group px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:border-gray-400 dark:hover:border-gray-500 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 inline-flex" aria-label="View SiteWise source code on GitHub">
             <span class="flex items-center">
