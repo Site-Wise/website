@@ -47,7 +47,8 @@
               type="text"
               id="name"
               required
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
+              :disabled="isSubmitting"
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white disabled:opacity-50 disabled:cursor-not-allowed"
               placeholder="Enter your full name"
             />
           </div>
@@ -62,7 +63,8 @@
               type="email"
               id="email"
               required
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
+              :disabled="isSubmitting"
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white disabled:opacity-50 disabled:cursor-not-allowed"
               placeholder="Enter your email address"
             />
           </div>
@@ -76,7 +78,8 @@
               v-model="form.company"
               type="text"
               id="company"
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
+              :disabled="isSubmitting"
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white disabled:opacity-50 disabled:cursor-not-allowed"
               placeholder="Enter your company name"
             />
           </div>
@@ -90,7 +93,8 @@
               v-model="form.phone"
               type="tel"
               id="phone"
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
+              :disabled="isSubmitting"
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white disabled:opacity-50 disabled:cursor-not-allowed"
               placeholder="+91 9876543210"
             />
           </div>
@@ -103,7 +107,8 @@
             <select
               v-model="form.inquiryType"
               id="inquiryType"
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
+              :disabled="isSubmitting"
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <option value="enterprise">Enterprise Plan Inquiry</option>
               <option value="custom">Custom Solution Request</option>
@@ -123,7 +128,8 @@
               v-model="form.projectDetails"
               id="projectDetails"
               rows="3"
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
+              :disabled="isSubmitting"
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white disabled:opacity-50 disabled:cursor-not-allowed"
               placeholder="Tell us about your project size, timeline, and specific requirements..."
             ></textarea>
           </div>
@@ -138,21 +144,20 @@
               id="message"
               :required="type === 'contact'"
               rows="4"
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
+              :disabled="isSubmitting"
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white disabled:opacity-50 disabled:cursor-not-allowed"
               :placeholder="type === 'sales' ? 'Any additional questions or information...' : 'Please describe your inquiry or question...'"
             ></textarea>
           </div>
 
           <!-- Turnstile -->
-          <div>
+          <div class="relative">
             <div 
               ref="turnstileWidget" 
-              class="cf-turnstile" 
-              :data-sitekey="turnstileSiteKey"
-              data-theme="auto"
-              data-callback="onTurnstileSuccess"
-              data-error-callback="onTurnstileError"
+              class="cf-turnstile"
+              :class="{ 'opacity-50': isSubmitting }"
             ></div>
+            <div v-if="isSubmitting" class="absolute inset-0 bg-transparent cursor-not-allowed"></div>
             <p v-if="turnstileError" class="text-red-600 dark:text-red-400 text-sm mt-2">
               {{ turnstileError }}
             </p>
@@ -163,15 +168,15 @@
             <button
               type="submit"
               :disabled="isSubmitting || !turnstileToken"
-              class="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 rounded-md font-medium hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+              class="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 rounded-md font-medium hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center min-h-[48px]"
             >
-              <span v-if="isSubmitting" class="flex items-center justify-center">
-                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <div v-if="isSubmitting" class="flex items-center justify-center">
+                <svg class="animate-spin h-5 w-5 text-white mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                   <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                   <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                 </svg>
-                Sending...
-              </span>
+                <span>Sending...</span>
+              </div>
               <span v-else>
                 {{ type === 'sales' ? 'Contact Sales' : 'Send Message' }}
               </span>
@@ -180,7 +185,8 @@
             <button
               type="button"
               @click="closeModal"
-              class="px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-md text-gray-700 dark:text-gray-300 font-medium hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200"
+              :disabled="isSubmitting"
+              class="px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-md text-gray-700 dark:text-gray-300 font-medium hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
             >
               Cancel
             </button>
@@ -259,6 +265,7 @@ const submitError = ref('')
 const turnstileToken = ref('')
 const turnstileError = ref('')
 const turnstileWidget = ref<HTMLElement | null>(null)
+const turnstileWidgetId = ref<string | null>(null)
 
 // Turnstile configuration
 // Uses VITE_TURNSTILE_SITE_KEY from environment variables
@@ -302,8 +309,8 @@ const resetForm = () => {
   turnstileError.value = ''
   
   // Reset Turnstile widget
-  if (window.turnstile && turnstileWidget.value) {
-    window.turnstile.reset()
+  if (window.turnstile && turnstileWidgetId.value) {
+    window.turnstile.reset(turnstileWidgetId.value)
   }
 }
 
@@ -352,14 +359,25 @@ const handleSubmit = async () => {
       throw new Error(`HTTP error! status: ${response.status}`)
     }
 
-    const result = await response.json() as { success: boolean; message?: string }
+    // Handle different response formats
+    let result: { success?: boolean; message?: string } = {}
+    try {
+      const text = await response.text()
+      if (text) {
+        result = JSON.parse(text) as { success?: boolean; message?: string }
+      }
+    } catch (parseError) {
+      // If response is not JSON, treat 200 status as success
+      console.log('Response is not JSON, treating as success')
+    }
     
-    if (result.success) {
+    // If we got a 200 status, consider it successful unless explicitly marked as failed
+    if (response.status === 200 && (result.success !== false)) {
       showSuccess.value = true
-      // Auto-close after 3 seconds
+      // Auto-close after 4 seconds to give user time to see success message
       setTimeout(() => {
         closeModal()
-      }, 3000)
+      }, 4000)
     } else {
       throw new Error(result.message || 'Submission failed')
     }
@@ -395,7 +413,7 @@ watch(() => props.isOpen, async (isOpen) => {
       // Small delay to ensure DOM is ready
       setTimeout(() => {
         if (window.turnstile && turnstileWidget.value) {
-          window.turnstile.render(turnstileWidget.value, {
+          turnstileWidgetId.value = window.turnstile.render(turnstileWidget.value, {
             sitekey: turnstileSiteKey,
             theme: 'auto',
             callback: 'onTurnstileSuccess',
@@ -442,8 +460,8 @@ declare global {
         theme?: string
         callback?: string
         'error-callback'?: string
-      }) => void
-      reset: () => void
+      }) => string
+      reset: (widgetId?: string) => void
     }
     onTurnstileSuccess?: (token: string) => void
     onTurnstileError?: () => void
