@@ -83,9 +83,14 @@
           </div>
         </div>
 
-        <!-- Cover Image Placeholder -->
-        <div v-if="post.coverImage" class="mt-8 aspect-video bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center">
-          <span class="text-white text-lg font-medium">{{ post.title.substring(0, 30) }}...</span>
+        <!-- Cover Image -->
+        <div v-if="post.coverImage" class="mt-8 aspect-video rounded-lg overflow-hidden">
+          <img 
+            :src="post.coverImage" 
+            :alt="post.title"
+            class="w-full h-full object-cover"
+            @error="handleImageError"
+          />
         </div>
       </header>
 
@@ -229,6 +234,18 @@ const formatContent = (content: string): string => {
     .replace(/^(?!<[h|l|s])/gm, '<p class="mb-4">')
     .replace(/<\/p><p class="mb-4">(<[h|l])/g, '$1')
     .replace(/(<\/h[123]>)<p class="mb-4">/g, '$1')
+}
+
+const handleImageError = (event: Event) => {
+  const target = event.target as HTMLImageElement
+  if (target) {
+    // Replace failed image with a fallback gradient
+    target.style.display = 'none'
+    const fallback = document.createElement('div')
+    fallback.className = 'w-full h-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center'
+    fallback.innerHTML = `<span class="text-white text-lg font-medium">${post.value?.title.substring(0, 30)}...</span>`
+    target.parentNode?.appendChild(fallback)
+  }
 }
 
 onMounted(() => {
