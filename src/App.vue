@@ -12,15 +12,19 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
 import { RouterView } from 'vue-router'
 import NavHeader from './components/NavHeader.vue'
 import FooterSection from './components/FooterSection.vue'
-import { useDarkMode } from './composables/useDarkMode'
+import { useWebVitals } from './composables/useWebVitals'
 
-const { initializeDarkMode } = useDarkMode()
+// Dark mode is initialized in main.ts for SSG compatibility
 
-onMounted(() => {
-  initializeDarkMode()
+// Initialize Web Vitals monitoring
+useWebVitals((metrics) => {
+  // Metrics are automatically logged in development
+  // In production, you can send these to your analytics service
+  if (import.meta.env.PROD && (window as any).posthog) {
+    (window as any).posthog.capture('web_vitals', metrics)
+  }
 })
 </script>
