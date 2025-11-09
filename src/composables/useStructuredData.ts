@@ -63,8 +63,8 @@ export function useOrganizationSchema() {
     '@type': 'Organization',
     name: 'SiteWise',
     description: 'Construction expense management and material tracking software for Indian contractors and builders.',
-    url: 'https://sitewise.app',
-    logo: 'https://sitewise.app/logo.svg',
+    url: 'https://sitewise.in',
+    logo: 'https://sitewise.in/logo.svg',
     sameAs: [
       'https://github.com/site-wise/app'
     ],
@@ -94,12 +94,12 @@ export function useWebsiteSchema() {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'SiteWise',
-    url: 'https://sitewise.app',
+    url: 'https://sitewise.in',
     description: 'Construction expense management app for tracking material costs, labor payments, and site budgets in India.',
     inLanguage: 'en-IN',
     potentialAction: {
       '@type': 'SearchAction',
-      target: 'https://sitewise.app/blog?search={search_term_string}',
+      target: 'https://sitewise.in/blog?search={search_term_string}',
       'query-input': 'required name=search_term_string'
     }
   }
@@ -128,7 +128,7 @@ export function useSoftwareApplicationSchema() {
       priceCurrency: 'INR'
     },
     description: 'Construction expense management app for India. Track material costs, labor payments, service expenses, and site budgets. Multi-user construction accounting software for contractors, builders, and civil engineers.',
-    url: 'https://sitewise.app',
+    url: 'https://sitewise.in',
     featureList: [
       'Material cost tracking',
       'Labor payment management',

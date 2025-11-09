@@ -16,7 +16,7 @@ export function useSeo(customMeta?: SeoMeta) {
 
   const meta = computed(() => {
     const routeMeta = route.meta as SeoMeta
-    const baseUrl = 'https://sitewise.app'
+    const baseUrl = 'https://sitewise.in'
     const currentPath = route.path
     return {
       title: customMeta?.title || routeMeta?.title || 'SiteWise - Construction Expense Management App India',
