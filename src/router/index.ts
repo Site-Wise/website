@@ -7,8 +7,8 @@ export const setupRouter = (): RouteRecordRaw[] => [
     name: 'Home',
     component: () => import('../views/HomeView.vue'),
     meta: {
-      title: 'SiteWise - Smart Construction Material & Service Tracking',
-      description: 'Open source material and service tracking app with lightweight PocketBase database. Multi-user, multi-lingual, PWA-ready construction management solution.',
+      title: 'SiteWise - Construction Expense Management App India | Track Site Costs & Budgets',
+      description: 'Best construction expense management app in India. Track material costs, labor payments, and site expenses with ease. Free construction accounting software for contractors, builders, and site engineers.',
       ogImage: '/og-image.jpg'
     }
   },
@@ -35,8 +35,9 @@ export const setupRouter = (): RouteRecordRaw[] => [
     name: 'BlogList',
     component: () => import('../views/BlogList.vue'),
     meta: {
-      title: 'Blog - SiteWise',
-      description: 'Latest updates, tips, and insights about construction management and SiteWise.'
+      title: 'Construction Management Tips & Expense Tracking Guide - SiteWise Blog',
+      description: 'Expert tips on construction expense management, cost tracking, budget planning, and site financial management. Learn how to manage construction costs effectively in India.',
+      ogImage: '/og-image.jpg'
     }
   },
   {

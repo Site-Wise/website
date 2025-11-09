@@ -83,12 +83,14 @@
           </div>
         </div>
 
-        <!-- Cover Image -->
-        <div v-if="post.coverImage" class="mt-8 aspect-video rounded-lg overflow-hidden">
-          <img 
-            :src="post.coverImage" 
+        <!-- Cover Image or SVG -->
+        <div v-if="post.coverSvg || post.coverImage" class="mt-8 rounded-lg overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-700 p-8">
+          <div v-if="post.coverSvg" v-html="post.coverSvg" class="max-w-md mx-auto"></div>
+          <img
+            v-else-if="post.coverImage"
+            :src="post.coverImage"
             :alt="post.title"
-            class="w-full h-full object-cover"
+            class="w-full h-full object-cover rounded-lg"
             @error="handleImageError"
           />
         </div>

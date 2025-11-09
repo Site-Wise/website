@@ -22,8 +22,9 @@
             :key="post.id"
             class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
           >
-            <div v-if="post.coverImage" class="aspect-video bg-gray-200 dark:bg-gray-700">
-              <div class="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+            <div class="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800 flex items-center justify-center p-8">
+              <div v-if="post.coverSvg" v-html="post.coverSvg" class="w-full max-h-40"></div>
+              <div v-else class="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center rounded">
                 <span class="text-white text-sm font-medium">{{ post.title.substring(0, 20) }}...</span>
               </div>
             </div>
@@ -92,8 +93,9 @@
             :key="post.id"
             class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
           >
-            <div class="aspect-video bg-gray-200 dark:bg-gray-700">
-              <div class="w-full h-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+            <div class="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800 flex items-center justify-center p-6">
+              <div v-if="post.coverSvg" v-html="post.coverSvg" class="w-full max-h-32"></div>
+              <div v-else class="w-full h-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center rounded">
                 <span class="text-white text-sm font-medium">{{ post.title.substring(0, 15) }}...</span>
               </div>
             </div>
