@@ -12,11 +12,11 @@ export default defineConfig({
     // PWA Plugin for service worker and offline support
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'logo.png'],
+      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'logo.png', 'robots.txt', 'sitemap.xml'],
       manifest: {
-        name: 'SiteWise - Construction Management',
+        name: 'SiteWise - Construction Expense Management',
         short_name: 'SiteWise',
-        description: 'Smart Construction Material & Service Tracking',
+        description: 'Track construction expenses, material costs, and labor payments. Best expense management app for Indian contractors.',
         theme_color: '#3b82f6',
         background_color: '#ffffff',
         display: 'standalone',

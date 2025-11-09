@@ -31,6 +31,12 @@ import FeaturesSection from '../components/FeaturesSection.vue'
 import TechStackSection from '../components/TechStackSection.vue'
 import PricingSection from '../components/PricingSection.vue'
 import CTASection from '../components/CTASection.vue'
+import { useOrganizationSchema, useWebsiteSchema, useSoftwareApplicationSchema } from '../composables/useStructuredData'
+
+// Add structured data for SEO
+useOrganizationSchema()
+useWebsiteSchema()
+useSoftwareApplicationSchema()
 
 const route = useRoute()
 

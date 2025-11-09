@@ -8,6 +8,7 @@ export interface SeoMeta {
   ogImage?: string
   ogType?: string
   keywords?: string
+  canonicalUrl?: string
 }
 
 export function useSeo(customMeta?: SeoMeta) {
@@ -15,17 +16,26 @@ export function useSeo(customMeta?: SeoMeta) {
 
   const meta = computed(() => {
     const routeMeta = route.meta as SeoMeta
+    const baseUrl = 'https://sitewise.app'
+    const currentPath = route.path
     return {
-      title: customMeta?.title || routeMeta?.title || 'SiteWise - Smart Construction Material & Service Tracking',
-      description: customMeta?.description || routeMeta?.description || 'Open source material and service tracking app with lightweight PocketBase database.',
+      title: customMeta?.title || routeMeta?.title || 'SiteWise - Construction Expense Management App India',
+      description: customMeta?.description || routeMeta?.description || 'Best construction expense management app in India. Track material costs, labor payments, and site expenses with ease.',
       ogImage: customMeta?.ogImage || routeMeta?.ogImage || '/og-image.jpg',
       ogType: customMeta?.ogType || routeMeta?.ogType || 'website',
-      keywords: customMeta?.keywords || routeMeta?.keywords || 'construction management, material tracking, service tracking'
+      keywords: customMeta?.keywords || routeMeta?.keywords || 'construction expense management India, construction cost tracking, site expense tracker',
+      canonicalUrl: customMeta?.canonicalUrl || routeMeta?.canonicalUrl || `${baseUrl}${currentPath}`
     }
   })
 
   useHead({
     title: meta.value.title,
+    link: [
+      {
+        rel: 'canonical',
+        href: meta.value.canonicalUrl
+      }
+    ],
     meta: [
       {
         name: 'description',
@@ -51,6 +61,10 @@ export function useSeo(customMeta?: SeoMeta) {
       {
         property: 'og:type',
         content: meta.value.ogType
+      },
+      {
+        property: 'og:url',
+        content: meta.value.canonicalUrl
       },
       // Twitter
       {

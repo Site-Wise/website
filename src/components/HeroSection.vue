@@ -17,34 +17,34 @@
         
         <!-- Main heading -->
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight transition-colors duration-200">
-          Smart Construction
+          Construction Expense
           <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Material Tracking
+            Management Made Easy
           </span>
         </h1>
-        
+
         <!-- Subheading -->
         <p class="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed transition-colors duration-200">
-          Open source app powered by lightweight PocketBase database. Track materials, services, and ledgers across multiple sites with ease.
+          Track material costs, labor payments, and site expenses effortlessly. The best free construction accounting app for Indian contractors and builders.
         </p>
         
         <!-- Feature highlights -->
         <div class="flex flex-wrap justify-center gap-4 mb-10 text-sm text-gray-600 dark:text-gray-400">
           <div class="flex items-center">
             <Check class="w-4 h-4 text-green-500 mr-2" />
-            Multi-user Support
+            Track Material Costs
           </div>
           <div class="flex items-center">
             <Check class="w-4 h-4 text-green-500 mr-2" />
-            Multi-lingual
+            Manage Labor Payments
           </div>
           <div class="flex items-center">
             <Check class="w-4 h-4 text-green-500 mr-2" />
-            Light & Dark Mode
+            Budget Monitoring
           </div>
           <div class="flex items-center">
             <Check class="w-4 h-4 text-green-500 mr-2" />
-            PWA Ready
+            Multi-Site Management
           </div>
         </div>
         
