@@ -1,120 +1,103 @@
+/* Sitewise design system — fonts: Space Grotesk (display), Inter (body), JetBrains Mono (ledger) */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-/* Custom scrollbar */
+/* ==========================================================================
+   Base — cream surface in light, ink in dark. Body is Inter.
+   ========================================================================== */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream text-ink font-sans antialiased;
+  }
+  .dark body {
+    @apply bg-ink text-cream;
+  }
+  .dark {
+    color-scheme: dark;
+  }
+  /* Display face for all headings */
+  h1, h2, h3, h4 {
+    font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* ==========================================================================
+   Utilities
+   ========================================================================== */
+@layer utilities {
+  /* Tabular numerals — everything with money */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.01em;
+  }
+  /* Eyebrow caps — tiny tracked labels */
+  .eyebrow {
+    @apply font-sans text-xs font-semibold uppercase tracking-[0.08em];
+  }
+  /* Dot-grid background — references graph paper / blueprints. Set text color
+     to control dot color; opacity baked low. */
+  .dotgrid {
+    background-image: radial-gradient(circle, currentColor 1px, transparent 1px);
+    background-size: 24px 24px;
+    opacity: 0.04;
+  }
+}
+
+/* Custom scrollbar — stone on cream / ink */
 ::-webkit-scrollbar {
   width: 8px;
 }
-
 ::-webkit-scrollbar-track {
-  @apply bg-gray-100 dark:bg-gray-800;
+  @apply bg-cream-2 dark:bg-ink-2;
 }
-
 ::-webkit-scrollbar-thumb {
-  @apply bg-gray-300 dark:bg-gray-600 rounded;
+  @apply bg-stone/50 dark:bg-ink-4 rounded;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-gray-400 dark:bg-gray-500;
+  @apply bg-stone dark:bg-stone-3;
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Focus styles for accessibility */
-button:focus,
-a:focus {
-  outline: 2px solid #3b82f6;
+/* Focus — amber accent, never blue */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #FFB800;
   outline-offset: 2px;
 }
 
-/* Custom animations */
+/* Selection — amber, not blue */
+::selection {
+  background: #FFB800;
+  color: #0A0E0D;
+}
+::-moz-selection {
+  background: #FFB800;
+  color: #0A0E0D;
+}
+
+/* Entry animation — fade + slide, snappy ease (no bounce) */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-
 .animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out;
+  animation: fadeInUp 0.6s cubic-bezier(0.32, 0.72, 0, 1);
 }
 
-/* Gradient text selection */
-::selection {
-  @apply bg-blue-600 text-white;
-}
-
-::-moz-selection {
-  @apply bg-blue-600 text-white;
-}
-
-/* Dark mode selection */
-.dark ::selection {
-  @apply bg-blue-500 text-white;
-}
-
-.dark ::-moz-selection {
-  @apply bg-blue-500 text-white;
-}
-
-/* Custom gradient backgrounds */
-.gradient-bg {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-/* Loading states */
-.loading {
-  opacity: 0.7;
-  pointer-events: none;
-}
-
-/* Responsive typography */
-@media (max-width: 640px) {
-  h1 {
-    font-size: 2rem;
-    line-height: 1.2;
-  }
-  
-  h2 {
-    font-size: 1.75rem;
-    line-height: 1.3;
-  }
-}
-
-/* Print styles */
 @media print {
   .no-print {
     display: none !important;
   }
-}
-
-/* Dark mode transitions */
-* {
-  transition-property: background-color, border-color, color, fill, stroke;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 200ms;
-}
-
-/* Ensure proper contrast in dark mode */
-.dark {
-  color-scheme: dark;
-}
-
-/* Custom dark mode utilities */
-.dark-gradient {
-  background: linear-gradient(135deg, #1e3a8a 0%, #581c87 100%);
-}
-
-/* Improved focus visibility in dark mode */
-.dark button:focus,
-.dark a:focus {
-  outline-color: #60a5fa;
 }

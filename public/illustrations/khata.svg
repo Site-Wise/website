@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" fill="none">
+  <rect width="240" height="200" fill="#FAFAF7"></rect>
+  <rect x="40" y="155" width="160" height="6" fill="#EDE9E1"></rect>
+  <rect x="40" y="40" width="160" height="120" fill="#0A0E0D"></rect>
+  <rect x="50" y="50" width="140" height="100" fill="#FAFAF7" stroke="#0A0E0D" stroke-width="2"></rect>
+  <g stroke="#A8A29E" stroke-width="1">
+    <line x1="60" y1="70" x2="180" y2="70"></line>
+    <line x1="60" y1="84" x2="180" y2="84"></line>
+    <line x1="60" y1="98" x2="180" y2="98"></line>
+    <line x1="60" y1="112" x2="180" y2="112"></line>
+    <line x1="60" y1="126" x2="180" y2="126"></line>
+  </g>
+  <g fill="#0A0E0D" font-family="JetBrains Mono, monospace" font-size="8">
+    <text x="62" y="68">Cement</text>
+    <text x="148" y="68" text-anchor="end" fill="#0A0E0D">₹12,400</text>
+    <text x="62" y="82">Bricks</text>
+    <text x="148" y="82" text-anchor="end" fill="#0A0E0D">₹8,200</text>
+    <text x="62" y="96">Mazdoor</text>
+    <text x="148" y="96" text-anchor="end" fill="#0A0E0D">₹5,600</text>
+    <text x="62" y="110">Steel</text>
+    <text x="148" y="110" text-anchor="end" fill="#0A0E0D">₹24,000</text>
+  </g>
+  <rect x="160" y="40" width="14" height="40" fill="#FFB800"></rect>
+  <polygon points="160,80 167,72 174,80" fill="#FFB800"></polygon>
+  <rect x="40" y="40" width="6" height="120" fill="#FFB800"></rect>
+</svg>
