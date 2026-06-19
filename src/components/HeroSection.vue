@@ -32,14 +32,14 @@
 
           <div class="flex flex-wrap items-center gap-x-5 gap-y-3">
             <span class="text-xs font-medium text-stone-2 dark:text-stone">No credit card · Self-hostable · O'Saasy License</span>
-            <img src="/illustrations/made-in-india-badge.svg" alt="Made in India" class="h-[22px]" />
+            <img src="/illustrations/made-in-india-badge.svg" alt="Made in India" width="120" height="32" loading="lazy" decoding="async" class="h-[22px] w-auto" />
           </div>
         </div>
 
         <!-- Proof visual -->
         <div class="relative animate-fade-in-up">
           <div class="rounded-lg overflow-hidden border border-cream-3 dark:border-ink-4 shadow-card dark:shadow-none bg-cream">
-            <img src="/illustrations/site.svg" alt="A construction site tracked in Sitewise" class="w-full block" />
+            <img src="/illustrations/site.svg" alt="A construction site tracked in Sitewise" width="320" height="200" fetchpriority="high" decoding="async" class="w-full h-auto block" />
           </div>
 
           <!-- Floating stat card -->

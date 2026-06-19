@@ -4,8 +4,8 @@
       <div class="flex justify-between items-center h-16">
         <!-- Logo -->
         <RouterLink to="/" class="flex items-center hover:opacity-80 transition-opacity duration-150" aria-label="Sitewise home">
-          <img src="/logo/sitewise-wordmark.svg" alt="Sitewise" class="h-7 block dark:hidden" />
-          <img src="/logo/sitewise-wordmark-dark.svg" alt="Sitewise" class="h-7 hidden dark:block" />
+          <img src="/logo/sitewise-wordmark.svg" alt="Sitewise" width="100" height="28" decoding="async" class="h-7 w-auto block dark:hidden" />
+          <img src="/logo/sitewise-wordmark-dark.svg" alt="Sitewise" width="100" height="28" decoding="async" class="h-7 w-auto hidden dark:block" />
         </RouterLink>
 
         <!-- Desktop Navigation -->

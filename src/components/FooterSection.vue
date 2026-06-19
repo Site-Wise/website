@@ -5,8 +5,8 @@
         <!-- Brand -->
         <div class="col-span-2">
           <RouterLink to="/" class="inline-flex items-center mb-4 hover:opacity-80 transition-opacity duration-150" aria-label="Sitewise home">
-            <img src="/logo/sitewise-wordmark.svg" alt="Sitewise" class="h-7 block dark:hidden" />
-            <img src="/logo/sitewise-wordmark-dark.svg" alt="Sitewise" class="h-7 hidden dark:block" />
+            <img src="/logo/sitewise-wordmark.svg" alt="Sitewise" width="100" height="28" loading="lazy" decoding="async" class="h-7 w-auto block dark:hidden" />
+            <img src="/logo/sitewise-wordmark-dark.svg" alt="Sitewise" width="100" height="28" loading="lazy" decoding="async" class="h-7 w-auto hidden dark:block" />
           </RouterLink>
           <p class="text-sm text-ink/70 dark:text-cream/70 max-w-sm leading-relaxed mb-6">
             The site expense system for Indian contractors. Track materials, mazdoor wages, vendor bills, and advances across every site — in one shared khata.

@@ -17,7 +17,7 @@
               <span class="w-2.5 h-2.5 rounded-full bg-cream-3 dark:bg-ink-4"></span>
               <span class="ml-2 font-mono text-xs text-stone-2 dark:text-stone">khata · Site A · 12 May 2026</span>
             </div>
-            <img src="/illustrations/khata.svg" alt="A Sitewise site ledger with material and labour costs" class="w-full block" />
+            <img src="/illustrations/khata.svg" alt="A Sitewise site ledger with material and labour costs" width="240" height="200" loading="lazy" decoding="async" class="w-full h-auto block" />
           </div>
           <!-- Shareable artifact — the viral loop -->
           <div class="mt-4 flex items-center justify-between gap-3 rounded-md border border-cream-3 dark:border-ink-4 px-4 py-3">

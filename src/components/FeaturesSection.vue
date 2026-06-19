@@ -11,7 +11,7 @@
       <div class="grid md:grid-cols-3 gap-5 mb-6">
         <div v-for="f in features" :key="f.eyebrow" class="rounded-lg overflow-hidden border border-cream-3 dark:border-ink-4 bg-cream dark:bg-ink-3 shadow-card dark:shadow-none transition-colors duration-150 hover:border-ink dark:hover:border-stone-3">
           <div class="h-44 flex items-center justify-center bg-cream-2 dark:bg-ink">
-            <img :src="`/illustrations/${f.illo}.svg`" :alt="f.title" class="h-full max-w-full" />
+            <img :src="`/illustrations/${f.illo}.svg`" :alt="f.title" width="240" height="200" loading="lazy" decoding="async" class="h-full max-w-full" />
           </div>
           <div class="p-6">
             <span class="eyebrow text-stone-3 dark:text-stone">{{ f.eyebrow }}</span>

@@ -1,6 +1,6 @@
-/* Sitewise design system — fonts: Space Grotesk (display), Inter (body), JetBrains Mono (ledger) */
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
-
+/* Sitewise design system — fonts (Space Grotesk / Inter / JetBrains Mono) are
+   loaded non-blocking via <link> in index.html, not @import here, to keep them
+   off the critical render path. */
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
