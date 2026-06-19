@@ -15,7 +15,7 @@
           <div class="text-sm text-ink/60 dark:text-cream/60 mt-1 mb-6">Forever · O'Saasy License</div>
           <ul class="flex flex-col gap-2.5 mb-8">
             <li v-for="f in selfHosted" :key="f" class="flex items-center gap-2.5 text-sm text-ink/80 dark:text-cream/80">
-              <span class="text-amber font-bold">✓</span> {{ f }}
+              <span class="text-forest-deep dark:text-forest font-bold">✓</span> {{ f }}
             </li>
           </ul>
           <a href="https://github.com/site-wise/app" target="_blank" rel="noopener" class="mt-auto inline-flex items-center justify-center h-11 rounded-sm border border-cream-3 dark:border-ink-4 hover:border-ink dark:hover:border-cream text-ink dark:text-cream font-semibold active:scale-[0.98] transition-all duration-150">
@@ -51,7 +51,7 @@
           <div class="text-sm text-ink/60 dark:text-cream/60 mt-1 mb-6">For builders at scale</div>
           <ul class="flex flex-col gap-2.5 mb-8">
             <li v-for="f in enterprise" :key="f" class="flex items-center gap-2.5 text-sm text-ink/80 dark:text-cream/80">
-              <span class="text-amber font-bold">✓</span> {{ f }}
+              <span class="text-forest-deep dark:text-forest font-bold">✓</span> {{ f }}
             </li>
           </ul>
           <button @click="openSalesModal" class="mt-auto inline-flex items-center justify-center h-11 rounded-sm border border-cream-3 dark:border-ink-4 hover:border-ink dark:hover:border-cream text-ink dark:text-cream font-semibold active:scale-[0.98] transition-all duration-150">

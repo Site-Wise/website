@@ -10,7 +10,7 @@
       <div class="grid md:grid-cols-3 gap-5">
         <div v-for="(s, i) in steps" :key="s.title" class="relative rounded-md border border-cream-3 dark:border-ink-4 bg-white dark:bg-ink-3 p-6">
           <div class="flex items-center gap-3 mb-4">
-            <span class="font-display text-2xl font-bold text-amber tabular-nums">{{ String(i + 1).padStart(2, '0') }}</span>
+            <span class="inline-flex items-center justify-center h-9 px-2.5 rounded-sm bg-amber text-ink font-display text-lg font-bold tabular-nums">{{ String(i + 1).padStart(2, '0') }}</span>
             <span class="h-px flex-1 bg-cream-3 dark:bg-ink-4"></span>
             <component :is="s.icon" class="w-5 h-5 text-stone-2 dark:text-stone" />
           </div>

@@ -1,0 +1,58 @@
+# Sitewise
+
+> Sitewise is the Construction Site Operating System for Indian contractors, supervisors, builders and accountants. It brings materials, labour, expenses, vendor bills, site progress and AI-powered insights into one system — replacing WhatsApp, spreadsheets and notebooks — so teams know exactly where every rupee goes on every site.
+
+Sitewise tracks material costs and deliveries, mazdoor (labour) wages and advances, vendor and running-account (RA) bills, petty cash, budgets and milestone-based payments across multiple construction sites. The core ledger is free and self-hostable under the O'Saasy License; managed hosting and the AI layer (bill extraction, anomaly detection, cashflow forecasting) are the paid "Pro" tier, free during early access. Open source: Vue 3 + TypeScript + Tailwind + Vite, PocketBase backend.
+
+## Core
+
+- [Sitewise — home](https://sitewise.in/): Product overview, outcomes, how it works, and pricing.
+- [Pricing](https://sitewise.in/#pricing): Free self-hosted core vs hosted Pro (with AI), and Enterprise.
+- [Open the app](https://app.sitewise.in/login): Sign in or start free on your first site.
+
+## Product & source
+
+- [GitHub repository](https://github.com/site-wise/app): Source code (O'Saasy License), issues, and releases.
+- [User guide](https://github.com/site-wise/app/blob/main/USER_GUIDE.md): How to set up sites and track expenses.
+- [Changelog](https://github.com/site-wise/app/blob/main/CHANGELOG.md): What's new in each release.
+
+## Guides — materials
+
+- [Track cement consumption on construction sites](https://sitewise.in/blog/track-cement-consumption-construction-sites)
+- [Reduce TMT bar / steel cutting waste](https://sitewise.in/blog/reduce-tmt-bar-steel-cutting-waste)
+- [Track sand consumption and prevent theft](https://sitewise.in/blog/track-sand-consumption-prevent-theft)
+- [Brick counting and tracking system](https://sitewise.in/blog/brick-counting-tracking-system)
+- [Aggregate and stone chip usage tracking](https://sitewise.in/blog/aggregate-stone-chip-usage-tracking)
+- [Control material wastage on construction sites](https://sitewise.in/blog/control-material-wastage-construction-sites)
+
+## Guides — labour & payments
+
+- [Daily wage payment tracking for construction](https://sitewise.in/blog/daily-wage-payment-tracking-construction)
+- [Mason attendance and productivity tracking](https://sitewise.in/blog/mason-attendance-productivity-tracking)
+- [Carpenter labor cost and work management](https://sitewise.in/blog/carpenter-labor-cost-work-management)
+- [Plumber and electrician payment management](https://sitewise.in/blog/plumber-electrician-payment-management)
+- [Contractor vs direct labor cost tracking](https://sitewise.in/blog/contractor-vs-direct-labor-cost-tracking)
+
+## Guides — budgets, cost & cash flow
+
+- [Construction budget vs actual expense tracking](https://sitewise.in/blog/construction-budget-actual-expense-tracking)
+- [Per-square-foot cost calculation for residential](https://sitewise.in/blog/per-square-foot-cost-calculation-residential)
+- [Project cash flow management for contractors](https://sitewise.in/blog/project-cash-flow-management-contractors)
+- [Construction equipment rental cost tracking](https://sitewise.in/blog/construction-equipment-rental-cost-tracking)
+
+## Guides — vendors & suppliers
+
+- [Cement supplier comparison and rate tracking](https://sitewise.in/blog/cement-supplier-comparison-rate-tracking)
+- [Steel supplier quality and delivery tracking](https://sitewise.in/blog/steel-supplier-quality-delivery-tracking)
+- [Hardware and fixture supplier management](https://sitewise.in/blog/hardware-fixture-supplier-management)
+
+## Company
+
+- [About Sitewise](https://sitewise.in/about): Mission and team.
+- [Blog](https://sitewise.in/blog): Guides on construction expense and site operations.
+- [Sitemap](https://sitewise.in/sitemap.xml): All indexable URLs.
+
+## Optional
+
+- [Privacy policy](https://sitewise.in/privacy-policy)
+- [Terms of service](https://sitewise.in/terms-of-service)

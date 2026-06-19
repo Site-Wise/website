@@ -20,9 +20,9 @@
         <div>
           <h3 class="eyebrow text-stone-3 dark:text-stone mb-4">Product</h3>
           <ul class="space-y-2.5 text-sm">
-            <li><a @click="navigateToSection('features')" class="text-ink/70 dark:text-cream/70 hover:text-ink dark:hover:text-cream transition-colors duration-150 cursor-pointer">Features</a></li>
-            <li><a @click="navigateToSection('how')" class="text-ink/70 dark:text-cream/70 hover:text-ink dark:hover:text-cream transition-colors duration-150 cursor-pointer">How it works</a></li>
-            <li><a @click="navigateToSection('pricing')" class="text-ink/70 dark:text-cream/70 hover:text-ink dark:hover:text-cream transition-colors duration-150 cursor-pointer">Pricing</a></li>
+            <li><a href="/#features" @click.prevent="navigateToSection('features')" class="text-ink/70 dark:text-cream/70 hover:text-ink dark:hover:text-cream transition-colors duration-150">Features</a></li>
+            <li><a href="/#how" @click.prevent="navigateToSection('how')" class="text-ink/70 dark:text-cream/70 hover:text-ink dark:hover:text-cream transition-colors duration-150">How it works</a></li>
+            <li><a href="/#pricing" @click.prevent="navigateToSection('pricing')" class="text-ink/70 dark:text-cream/70 hover:text-ink dark:hover:text-cream transition-colors duration-150">Pricing</a></li>
             <li><a href="https://github.com/site-wise/app/blob/main/USER_GUIDE.md" class="text-ink/70 dark:text-cream/70 hover:text-ink dark:hover:text-cream transition-colors duration-150" target="_blank" rel="noopener">Docs</a></li>
             <li><a href="https://github.com/site-wise/app/blob/main/CHANGELOG.md" class="text-ink/70 dark:text-cream/70 hover:text-ink dark:hover:text-cream transition-colors duration-150" target="_blank" rel="noopener">Changelog</a></li>
           </ul>
@@ -34,7 +34,7 @@
           <ul class="space-y-2.5 text-sm">
             <li><RouterLink to="/about" class="text-ink/70 dark:text-cream/70 hover:text-ink dark:hover:text-cream transition-colors duration-150">About</RouterLink></li>
             <li><RouterLink to="/blog" class="text-ink/70 dark:text-cream/70 hover:text-ink dark:hover:text-cream transition-colors duration-150">Blog</RouterLink></li>
-            <li><a @click="openContactModal" class="text-ink/70 dark:text-cream/70 hover:text-ink dark:hover:text-cream transition-colors duration-150 cursor-pointer">Contact</a></li>
+            <li><button type="button" @click="openContactModal" class="text-ink/70 dark:text-cream/70 hover:text-ink dark:hover:text-cream transition-colors duration-150 text-left">Contact</button></li>
             <li><a href="https://app.sitewise.in/login" class="text-ink/70 dark:text-cream/70 hover:text-ink dark:hover:text-cream transition-colors duration-150">Open app</a></li>
           </ul>
         </div>
