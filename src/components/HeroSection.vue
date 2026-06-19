@@ -9,7 +9,7 @@
         <div class="animate-fade-in-up">
           <span class="inline-flex items-center gap-2 h-7 px-3 rounded-sm bg-amber-soft text-[#6B4900] text-xs font-semibold tracking-[0.02em] mb-6">
             <span class="w-1.5 h-1.5 rounded-full bg-amber"></span>
-            Live · {{ signupsToday }} contractors signed up today
+            The Construction Site Operating System
           </span>
 
           <h1 class="font-display text-4xl sm:text-5xl lg:text-[60px] font-bold leading-[1.02] text-ink dark:text-cream mb-5">
@@ -17,8 +17,8 @@
           </h1>
 
           <p class="text-lg text-ink/70 dark:text-cream/70 leading-relaxed max-w-xl mb-8">
-            Sitewise is the site expense system for Indian contractors, supervisors, and accountants.
-            Materials, mazdoor wages, petty cash, vendor bills, and advances — in one shared khata.
+            Most contractors run projects on WhatsApp, spreadsheets, and notebooks. Sitewise brings
+            materials, labour, expenses, vendor bills, site progress, and AI insights into one system.
           </p>
 
           <div class="flex flex-col sm:flex-row gap-3 mb-6">
@@ -31,7 +31,7 @@
           </div>
 
           <div class="flex flex-wrap items-center gap-x-5 gap-y-3">
-            <span class="text-xs font-medium text-stone-2 dark:text-stone">No credit card · Self-hostable · O'Saasy License</span>
+            <span class="text-xs font-medium text-stone-2 dark:text-stone">{{ signupsToday }} contractors joined today · No credit card · Self-hostable</span>
             <img src="/illustrations/made-in-india-badge.svg" alt="Made in India" width="120" height="32" loading="lazy" decoding="async" class="h-[22px] w-auto" />
           </div>
         </div>

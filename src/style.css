@@ -101,3 +101,40 @@ a:focus-visible {
     display: none !important;
   }
 }
+
+/* ==========================================================================
+   Performance — scope transitions to interactive elements only (avoids the
+   universal-selector repaint cost), reserve image space, respect reduced motion.
+   ========================================================================== */
+button, a, .transition-colors {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Prevent layout shifts — images scale within their box, keep aspect ratio */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+.will-change-transform {
+  will-change: transform;
+}
+.gpu-accelerate {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Reduce motion for accessibility and performance */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

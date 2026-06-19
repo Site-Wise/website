@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#FFB800" opacity="0.07" />
+    </pattern>
+  </defs>
+
+  <!-- Ink background + blueprint dot grid -->
+  <rect width="1200" height="630" fill="#0A0E0D" />
+  <rect width="1200" height="630" fill="url(#dots)" />
+  <!-- Amber baseline accent -->
+  <rect x="0" y="624" width="1200" height="6" fill="#FFB800" />
+
+  <!-- Brand mark + wordmark -->
+  <g transform="translate(64, 56)">
+    <g transform="scale(0.78)">
+      <g stroke="#FAFAF7" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter" fill="none">
+        <line x1="22" y1="14" x2="22" y2="46"></line>
+        <line x1="10" y1="18" x2="46" y2="18"></line>
+        <line x1="22" y1="10" x2="44" y2="18"></line>
+        <line x1="38" y1="18" x2="38" y2="32"></line>
+        <line x1="14" y1="46" x2="30" y2="46"></line>
+      </g>
+      <rect x="35" y="32" width="6" height="5" fill="#FFB800"></rect>
+      <rect x="19" y="10" width="6" height="4" fill="#FFB800"></rect>
+    </g>
+    <text x="58" y="38" font-family="DejaVu Sans" font-size="30" font-weight="700" letter-spacing="-0.02em" fill="#FAFAF7">Sitewise</text>
+  </g>
+
+  <!-- Eyebrow -->
+  <text x="64" y="210" font-family="DejaVu Sans" font-size="19" font-weight="700" letter-spacing="0.16em" fill="#FFB800">THE CONSTRUCTION SITE OPERATING SYSTEM</text>
+
+  <!-- Headline (line 2 fully amber to avoid mixed-fill layout issues) -->
+  <g font-family="DejaVu Sans" font-weight="700" font-size="60" letter-spacing="-0.02em">
+    <text x="62" y="288" fill="#FAFAF7">Know where every</text>
+    <text x="62" y="362" fill="#FFB800">rupee goes on every</text>
+    <text x="62" y="436" fill="#FAFAF7">construction site.</text>
+  </g>
+
+  <!-- Capability row -->
+  <text x="64" y="544" font-family="DejaVu Sans" font-size="22" font-weight="400" fill="#A8A29E">Materials  ·  Labour  ·  Vendor bills  ·  Site progress  ·  AI insights</text>
+
+  <!-- Product ledger card -->
+  <g transform="translate(760, 150)">
+    <rect x="0" y="0" width="380" height="330" rx="16" fill="#FAFAF7" />
+    <rect x="0" y="0" width="6" height="330" fill="#FFB800" />
+    <!-- header -->
+    <text x="28" y="42" font-family="DejaVu Sans Mono" font-size="14" fill="#57534E">khata · Site A · 12 May 2026</text>
+    <line x1="28" y1="60" x2="352" y2="60" stroke="#E5E5E0" stroke-width="1" />
+    <!-- rows -->
+    <g font-family="DejaVu Sans Mono" font-size="18">
+      <text x="28" y="98" fill="#0A0E0D">Cement</text>
+      <text x="352" y="98" text-anchor="end" fill="#0A0E0D">₹12,400</text>
+      <text x="28" y="138" fill="#0A0E0D">Bricks</text>
+      <text x="352" y="138" text-anchor="end" fill="#0A0E0D">₹8,200</text>
+      <text x="28" y="178" fill="#0A0E0D">Mazdoor</text>
+      <text x="352" y="178" text-anchor="end" fill="#0A0E0D">₹5,600</text>
+      <text x="28" y="218" fill="#0A0E0D">Steel</text>
+      <text x="352" y="218" text-anchor="end" fill="#0A0E0D">₹24,000</text>
+    </g>
+    <line x1="28" y1="244" x2="352" y2="244" stroke="#E5E5E0" stroke-width="1" />
+    <!-- total -->
+    <text x="28" y="282" font-family="DejaVu Sans" font-size="12" font-weight="700" letter-spacing="0.08em" fill="#57534E">TODAY ACROSS YOUR SITES</text>
+    <text x="28" y="316" font-family="DejaVu Sans" font-size="29" font-weight="700" fill="#0A0E0D">₹47,200</text>
+    <text x="352" y="314" text-anchor="end" font-family="DejaVu Sans" font-size="17" font-weight="700" fill="#15803D">↑ 8.4%</text>
+  </g>
+</svg>

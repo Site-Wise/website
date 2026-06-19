@@ -28,14 +28,25 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 
-const signups = ref(2847)
-const tracked = ref(48294712)
+// Live activity stays in a believable range: 50 → 100 signups, tracked starts at ₹5 Cr.
+const SIGNUP_BASE = 50
+const SIGNUP_CEILING = 100
+
+const signups = ref(SIGNUP_BASE)
+const tracked = ref(50000000) // ₹5 Cr
 let id: ReturnType<typeof setInterval>
 
 onMounted(() => {
   id = setInterval(() => {
-    if (Math.random() < 0.4) signups.value += 1
-    tracked.value += Math.floor(Math.random() * 4200)
+    if (signups.value >= SIGNUP_CEILING) {
+      clearInterval(id)
+      return
+    }
+    if (Math.random() < 0.4) {
+      signups.value += 1
+      // ~₹1L per new signup keeps the running total realistic (hovers around ₹5 Cr)
+      tracked.value += 80000 + Math.floor(Math.random() * 120000)
+    }
   }, 1800)
 })
 

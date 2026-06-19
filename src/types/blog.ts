@@ -11,6 +11,7 @@ export interface BlogPost {
   readingTime: number
   featured?: boolean
   coverImage?: string
+  coverSvg?: string // Inline SVG for lightweight, custom images
 }
 
 export interface BlogMetadata {
