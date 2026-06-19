@@ -37,8 +37,17 @@ export default defineConfig({
   ssgOptions: {
     script: 'async',
     formatting: 'minify',
-    crittersOptions: {
+    // vite-ssg 28 uses beasties (the maintained critters fork). This inlines the
+    // critical CSS into each page's <head> and converts the bundle stylesheet to a
+    // non-blocking async load, removing app.css from the render-blocking path.
+    beastiesOptions: {
+      // Keep our hand-written critical CSS in index.html instead of stripping it.
       reduceInlineStyles: false,
+      // Google Fonts are already loaded non-blocking in index.html — don't touch them.
+      external: true,
+      // Inline critical CSS, then load the full bundle stylesheet asynchronously
+      // (preload + onload swap) so app.css no longer blocks first render.
+      preload: 'swap',
     },
   },
 
@@ -57,6 +66,12 @@ export default defineConfig({
             }
             if (id.includes('@vueuse')) {
               return 'vueuse'
+            }
+            // posthog-js is large and ships legacy/polyfilled code. Keep it in its own
+            // chunk so it stays a pure dynamic-import (loaded on idle) and never gets
+            // modulepreloaded alongside the statically-imported vendor code.
+            if (id.includes('posthog-js')) {
+              return 'posthog'
             }
             return 'vendor'
           }
