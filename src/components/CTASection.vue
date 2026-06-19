@@ -1,59 +1,41 @@
 <template>
-  <section class="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-700 dark:from-blue-800 dark:via-purple-800 dark:to-blue-900 relative overflow-hidden transition-colors duration-500">
-    <!-- Background decorations -->
-    <div class="absolute inset-0 bg-gradient-to-br from-blue-600/90 to-purple-600/90 dark:from-blue-800/90 dark:to-purple-800/90"></div>
-    <div class="absolute top-0 left-0 w-96 h-96 bg-white/10 dark:bg-white/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-    <div class="absolute bottom-0 right-0 w-96 h-96 bg-white/10 dark:bg-white/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
-    
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-        Ready to transform your
-        <span class="block">construction management?</span>
+  <section class="relative overflow-hidden bg-ink text-cream py-20 sm:py-24 lg:py-28">
+    <div class="absolute inset-0 pointer-events-none text-amber dotgrid" aria-hidden="true"></div>
+
+    <div class="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-cream mb-5 leading-[1.05]">
+        Every day on paper costs you <span class="text-amber">₹3,200</span>.
       </h2>
-      
-      <p class="text-xl text-blue-100 dark:text-blue-200 mb-10 max-w-3xl mx-auto">
-        Join thousands of construction professionals who trust SiteWise to manage their materials, services, and sites efficiently.
+      <p class="text-lg text-[#C9C5BE] mb-10 max-w-xl mx-auto">
+        Add your first site, log today's kharcha, and see where the money actually goes. Setup takes 30 seconds.
       </p>
-      
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a href="https://app.sitewise.in/login" class="group px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl hover:bg-gray-50 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl inline-flex" aria-label="Start free trial of SiteWise">
-          <span class="flex items-center">
-            Start Free Trial
-            <ArrowRight class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
-          </span>
+
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="https://app.sitewise.in/login" class="inline-flex items-center justify-center h-13 px-6 rounded-sm bg-amber hover:bg-amber-deep text-ink font-semibold text-base active:scale-[0.98] transition-all duration-150" style="height:52px" aria-label="Start free on your first site">
+          Start free on your first site →
         </a>
-        
-        <a href="https://github.com/site-wise/app" target="_blank" rel="noopener" class="group px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:border-white/50 hover:bg-white/10 transition-all duration-200 inline-flex" aria-label="View SiteWise source code on GitHub">
-          <span class="flex items-center">
-            <Github class="w-5 h-5 mr-2" />
-            View on GitHub
-          </span>
+        <a href="https://github.com/site-wise/app" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 h-13 px-6 rounded-sm border border-ink-4 hover:border-cream text-cream font-semibold text-base active:scale-[0.98] transition-all duration-150" style="height:52px" aria-label="View Sitewise on GitHub">
+          <Github class="w-5 h-5" /> View on GitHub
         </a>
       </div>
-      
-      <!-- Social proof -->
-      <div class="mt-12 flex flex-wrap justify-center items-center gap-8 opacity-80">
-        <div class="flex items-center text-blue-100 dark:text-blue-200">
-          <Star class="w-5 h-5 text-yellow-400 mr-1" />
-          <span class="font-medium">MIT Licensed</span>
-        </div>
-        <div class="flex items-center text-blue-100 dark:text-blue-200">
-          <Users class="w-5 h-5 mr-2" />
-          <span class="font-medium">Multi-User Ready</span>
-        </div>
-        <div class="flex items-center text-blue-100 dark:text-blue-200">
-          <Globe class="w-5 h-5 mr-2" />
-          <span class="font-medium">Multi-Lingual</span>
-        </div>
-        <div class="flex items-center text-blue-100 dark:text-blue-200">
-          <Heart class="w-5 h-5 mr-2" />
-          <span class="font-medium">Made in India</span>
-        </div>
+
+      <div class="mt-12 flex flex-wrap justify-center items-center gap-x-7 gap-y-3">
+        <span v-for="p in proof" :key="p.label" class="flex items-center gap-2 text-sm text-[#C9C5BE]">
+          <component :is="p.icon" class="w-4 h-4 text-amber" />
+          {{ p.label }}
+        </span>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { ArrowRight, Github, Star, Users, Globe, Heart } from 'lucide-vue-next'
+import { Github, Scale, Users, Globe, Heart } from 'lucide-vue-next'
+
+const proof = [
+  { icon: Scale, label: 'O\'Saasy License' },
+  { icon: Users, label: 'Multi-user' },
+  { icon: Globe, label: 'Multi-lingual' },
+  { icon: Heart, label: 'Made in India' },
+]
 </script>

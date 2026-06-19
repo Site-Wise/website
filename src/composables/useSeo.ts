@@ -5,6 +5,8 @@ import { useRoute } from 'vue-router'
 export interface SeoMeta {
   title?: string
   description?: string
+  ogTitle?: string
+  ogDescription?: string
   ogImage?: string
   ogType?: string
   keywords?: string
@@ -21,7 +23,9 @@ export function useSeo(customMeta?: SeoMeta) {
     return {
       title: customMeta?.title || routeMeta?.title || 'SiteWise - Construction Expense Management App India',
       description: customMeta?.description || routeMeta?.description || 'Best construction expense management app in India. Track material costs, labor payments, and site expenses with ease.',
-      ogImage: customMeta?.ogImage || routeMeta?.ogImage || '/og-image.jpg',
+      ogTitle: customMeta?.ogTitle || routeMeta?.ogTitle || customMeta?.title || routeMeta?.title || 'SiteWise - Construction Expense Management App India',
+      ogDescription: customMeta?.ogDescription || routeMeta?.ogDescription || customMeta?.description || routeMeta?.description || 'Best construction expense management app in India. Track material costs, labor payments, and site expenses with ease.',
+      ogImage: customMeta?.ogImage || routeMeta?.ogImage || 'https://sitewise.in/og-image.png',
       ogType: customMeta?.ogType || routeMeta?.ogType || 'website',
       keywords: customMeta?.keywords || routeMeta?.keywords || 'construction expense management India, construction cost tracking, site expense tracker',
       canonicalUrl: customMeta?.canonicalUrl || routeMeta?.canonicalUrl || `${baseUrl}${currentPath}`
@@ -48,11 +52,11 @@ export function useSeo(customMeta?: SeoMeta) {
       // Open Graph
       {
         property: 'og:title',
-        content: meta.value.title
+        content: meta.value.ogTitle
       },
       {
         property: 'og:description',
-        content: meta.value.description
+        content: meta.value.ogDescription
       },
       {
         property: 'og:image',
@@ -69,11 +73,11 @@ export function useSeo(customMeta?: SeoMeta) {
       // Twitter
       {
         name: 'twitter:title',
-        content: meta.value.title
+        content: meta.value.ogTitle
       },
       {
         name: 'twitter:description',
-        content: meta.value.description
+        content: meta.value.ogDescription
       },
       {
         name: 'twitter:image',

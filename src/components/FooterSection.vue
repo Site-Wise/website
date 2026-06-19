@@ -1,75 +1,59 @@
 <template>
-  <footer class="bg-gray-900 dark:bg-black text-white transition-colors duration-500">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+  <footer class="bg-cream dark:bg-ink border-t border-cream-3 dark:border-ink-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
         <!-- Brand -->
-        <div class="col-span-1 md:col-span-2">
-          <RouterLink to="/" class="flex items-center mb-4 hover:opacity-80 transition-opacity duration-200">
-            <img src="/logo.png" alt="SiteWise Logo" class="h-12 rounded-lg" />
-            <span class="ml-2 text-xl font-bold leading-tight text-white">Site</span>
-            <span class="text-xl font-bold leading-tight text-blue-600">Wise</span>
+        <div class="col-span-2">
+          <RouterLink to="/" class="inline-flex items-center mb-4 hover:opacity-80 transition-opacity duration-150" aria-label="Sitewise home">
+            <img src="/logo/sitewise-wordmark.svg" alt="Sitewise" width="100" height="28" loading="lazy" decoding="async" class="h-7 w-auto block dark:hidden" />
+            <img src="/logo/sitewise-wordmark-dark.svg" alt="Sitewise" width="100" height="28" loading="lazy" decoding="async" class="h-7 w-auto hidden dark:block" />
           </RouterLink>
-          <p class="text-gray-400 dark:text-gray-500 mb-6 max-w-md transition-colors duration-200">
-            Open source construction management app powered by lightweight PocketBase database. 
-            Track materials, services, and manage multiple sites efficiently.
+          <p class="text-sm text-ink/70 dark:text-cream/70 max-w-sm leading-relaxed mb-6">
+            The site expense system for Indian contractors. Track materials, mazdoor wages, vendor bills, and advances across every site — in one shared khata.
           </p>
-          <div class="flex space-x-4">
-            <a href="https://github.com/site-wise/app" class="text-gray-400 dark:text-gray-500 hover:text-white transition-colors duration-200" target="_blank" rel="noopener" aria-label="Visit SiteWise on GitHub">
-              <Github class="w-6 h-6" />
-            </a>
-            <!-- <a href="https://twitter.com/sitewise" class="text-gray-400 dark:text-gray-500 hover:text-white transition-colors duration-200" target="_blank" rel="noopener" aria-label="Follow SiteWise on Twitter">
-              <Twitter class="w-6 h-6" />
-            </a>
-            <a href="https://linkedin.com/company/sitewise" class="text-gray-400 dark:text-gray-500 hover:text-white transition-colors duration-200" target="_blank" rel="noopener" aria-label="Connect with SiteWise on LinkedIn">
-              <Linkedin class="w-6 h-6" />
-            </a> -->
-          </div>
+          <a href="https://github.com/site-wise/app" class="inline-flex items-center justify-center w-10 h-10 rounded-sm border border-cream-3 dark:border-ink-4 text-ink/70 dark:text-cream/70 hover:text-ink dark:hover:text-cream hover:border-ink dark:hover:border-cream transition-colors duration-150" target="_blank" rel="noopener" aria-label="Sitewise on GitHub">
+            <Github class="w-5 h-5" />
+          </a>
         </div>
-        
+
         <!-- Product -->
         <div>
-          <h3 class="font-semibold mb-4">Product</h3>
-          <ul class="space-y-2 text-gray-400 dark:text-gray-500">
-            <li><a @click="navigateToSection('features')" class="hover:text-white transition-colors duration-200 cursor-pointer">Features</a></li>
-            <li><a @click="navigateToSection('pricing')" class="hover:text-white transition-colors duration-200 cursor-pointer">Pricing</a></li>
-            <li><a href="https://github.com/site-wise/app/blob/main/USER_GUIDE.md" class="hover:text-white transition-colors duration-200" target="_blank" rel="noopener">Documentation</a></li>
-            <!-- <li><a href="/api" class="hover:text-white transition-colors duration-200">API Reference</a></li> -->
-            <li><a href="https://github.com/site-wise/app/blob/main/CHANGELOG.md" class="hover:text-white transition-colors duration-200" target="_blank" rel="noopener">Changelog</a></li>
+          <h3 class="eyebrow text-stone-3 dark:text-stone mb-4">Product</h3>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="/#features" @click.prevent="navigateToSection('features')" class="text-ink/70 dark:text-cream/70 hover:text-ink dark:hover:text-cream transition-colors duration-150">Features</a></li>
+            <li><a href="/#how" @click.prevent="navigateToSection('how')" class="text-ink/70 dark:text-cream/70 hover:text-ink dark:hover:text-cream transition-colors duration-150">How it works</a></li>
+            <li><a href="/#pricing" @click.prevent="navigateToSection('pricing')" class="text-ink/70 dark:text-cream/70 hover:text-ink dark:hover:text-cream transition-colors duration-150">Pricing</a></li>
+            <li><a href="https://github.com/site-wise/app/blob/main/USER_GUIDE.md" class="text-ink/70 dark:text-cream/70 hover:text-ink dark:hover:text-cream transition-colors duration-150" target="_blank" rel="noopener">Docs</a></li>
+            <li><a href="https://github.com/site-wise/app/blob/main/CHANGELOG.md" class="text-ink/70 dark:text-cream/70 hover:text-ink dark:hover:text-cream transition-colors duration-150" target="_blank" rel="noopener">Changelog</a></li>
           </ul>
         </div>
-        
+
         <!-- Company -->
         <div>
-          <h3 class="font-semibold mb-4">Company</h3>
-          <ul class="space-y-2 text-gray-400 dark:text-gray-500">
-            <li><RouterLink to="/about" class="hover:text-white transition-colors duration-200">About</RouterLink></li>
-            <li><RouterLink to="/blog" class="hover:text-white transition-colors duration-200">Blog</RouterLink></li>
-            <!-- <li><a href="/careers" class="hover:text-white transition-colors duration-200">Careers</a></li> -->
-            <li><a @click="openContactModal" class="hover:text-white transition-colors duration-200 cursor-pointer">Contact</a></li>
-            <!-- <li><a href="/support" class="hover:text-white transition-colors duration-200">Support</a></li> -->
+          <h3 class="eyebrow text-stone-3 dark:text-stone mb-4">Company</h3>
+          <ul class="space-y-2.5 text-sm">
+            <li><RouterLink to="/about" class="text-ink/70 dark:text-cream/70 hover:text-ink dark:hover:text-cream transition-colors duration-150">About</RouterLink></li>
+            <li><RouterLink to="/blog" class="text-ink/70 dark:text-cream/70 hover:text-ink dark:hover:text-cream transition-colors duration-150">Blog</RouterLink></li>
+            <li><button type="button" @click="openContactModal" class="text-ink/70 dark:text-cream/70 hover:text-ink dark:hover:text-cream transition-colors duration-150 text-left">Contact</button></li>
+            <li><a href="https://app.sitewise.in/login" class="text-ink/70 dark:text-cream/70 hover:text-ink dark:hover:text-cream transition-colors duration-150">Open app</a></li>
           </ul>
         </div>
       </div>
-      
-      <!-- Bottom section -->
-      <div class="border-t border-gray-800 dark:border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-        <div class="text-gray-400 dark:text-gray-500 text-sm mb-4 md:mb-0 transition-colors duration-200">
-          © 2025 SiteWise. Made with AI ❤️ in India. Licensed under MIT.
+
+      <!-- Bottom -->
+      <div class="border-t border-cream-3 dark:border-ink-4 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="text-sm text-stone-2 dark:text-stone">
+          © 2026 Sitewise · Made with AI ❤️ in India
         </div>
-        <div class="flex space-x-6 text-sm text-gray-400 dark:text-gray-500">
-          <RouterLink to="/privacy-policy" class="hover:text-white transition-colors duration-200">Privacy Policy</RouterLink>
-          <RouterLink to="/terms-of-service" class="hover:text-white transition-colors duration-200">Terms of Service</RouterLink>
-          <a href="https://github.com/site-wise/app/blob/main/LICENSE.md" class="hover:text-white transition-colors duration-200" target="_blank" rel="noopener">MIT License</a>
+        <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
+          <RouterLink to="/privacy-policy" class="text-ink/70 dark:text-cream/70 hover:text-ink dark:hover:text-cream transition-colors duration-150">Privacy</RouterLink>
+          <RouterLink to="/terms-of-service" class="text-ink/70 dark:text-cream/70 hover:text-ink dark:hover:text-cream transition-colors duration-150">Terms</RouterLink>
+          <a href="https://github.com/site-wise/app/blob/main/LICENSE.md" class="text-ink/70 dark:text-cream/70 hover:text-ink dark:hover:text-cream transition-colors duration-150" target="_blank" rel="noopener">O'Saasy License</a>
         </div>
       </div>
     </div>
-    
-    <!-- Contact Modal -->
-    <ContactModal 
-      :is-open="isContactModalOpen" 
-      type="contact" 
-      @close="closeContactModal" 
-    />
+
+    <ContactModal :is-open="isContactModalOpen" type="contact" @close="closeContactModal" />
   </footer>
 </template>
 
@@ -83,11 +67,9 @@ const router = useRouter()
 const isContactModalOpen = ref(false)
 
 const navigateToSection = (sectionId: string) => {
-  // If we're not on the home page, navigate to home first
   if (router.currentRoute.value.path !== '/') {
     router.push(`/#${sectionId}`)
   } else {
-    // If we're on home page, just scroll to section
     const element = document.getElementById(sectionId)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
@@ -95,11 +77,6 @@ const navigateToSection = (sectionId: string) => {
   }
 }
 
-const openContactModal = () => {
-  isContactModalOpen.value = true
-}
-
-const closeContactModal = () => {
-  isContactModalOpen.value = false
-}
+const openContactModal = () => { isContactModalOpen.value = true }
+const closeContactModal = () => { isContactModalOpen.value = false }
 </script>

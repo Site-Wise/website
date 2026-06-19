@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" fill="none">
+  <rect width="320" height="200" fill="#FAFAF7"></rect>
+  <rect x="0" y="170" width="320" height="30" fill="#EDE9E1"></rect>
+  <rect x="80" y="60" width="120" height="110" fill="#0A0E0D"></rect>
+  <g fill="#FFB800">
+    <rect x="92" y="74" width="14" height="14"></rect>
+    <rect x="116" y="74" width="14" height="14"></rect>
+    <rect x="140" y="74" width="14" height="14"></rect>
+    <rect x="164" y="74" width="14" height="14"></rect>
+    <rect x="92" y="100" width="14" height="14"></rect>
+    <rect x="140" y="100" width="14" height="14"></rect>
+    <rect x="164" y="100" width="14" height="14"></rect>
+    <rect x="92" y="126" width="14" height="14"></rect>
+    <rect x="116" y="126" width="14" height="14"></rect>
+    <rect x="164" y="126" width="14" height="14"></rect>
+  </g>
+  <g stroke="#0A0E0D" stroke-width="2">
+    <line x1="80" y1="60" x2="80" y2="170"></line>
+    <line x1="200" y1="60" x2="200" y2="170"></line>
+    <line x1="76" y1="90" x2="204" y2="90"></line>
+    <line x1="76" y1="120" x2="204" y2="120"></line>
+    <line x1="76" y1="150" x2="204" y2="150"></line>
+  </g>
+  <g stroke="#0A0E0D" stroke-width="3" fill="none">
+    <line x1="240" y1="170" x2="240" y2="30"></line>
+    <line x1="240" y1="30" x2="290" y2="30"></line>
+    <line x1="240" y1="50" x2="285" y2="30"></line>
+  </g>
+  <line x1="280" y1="30" x2="280" y2="60" stroke="#0A0E0D" stroke-width="2"></line>
+  <rect x="272" y="60" width="16" height="10" fill="#FFB800"></rect>
+  <circle cx="50" cy="40" r="18" fill="#FFB800"></circle>
+  <g fill="#0A0E0D">
+    <circle cx="220" cy="160" r="3"></circle>
+    <rect x="217" y="163" width="6" height="9"></rect>
+    <circle cx="60" cy="160" r="3"></circle>
+    <rect x="57" y="163" width="6" height="9"></rect>
+  </g>
+</svg>

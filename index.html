@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#FAFAF7" />
+  <meta name="color-scheme" content="light dark" />
 
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Best construction expense management app in India. Track material costs, labor payments, and site expenses with ease. Free construction accounting software for contractors, builders, and site engineers." />
-  <meta name="keywords" content="construction expense management India, construction cost tracking app, site expense tracker, construction accounting software, material cost tracking, labor payment management, construction ledger app, contractor expense app, building cost management, civil construction expenses, site financial management, construction budget tracker, material tracking India, construction ERP, site wise expense management" />
-  <meta name="author" content="SiteWise Team" />
-  <meta name="theme-color" content="#3b82f6" />
-  <meta name="color-scheme" content="light dark" />
+  <meta name="description" content="Track materials, labour, vendor bills, cash expenses and project budgets across multiple construction sites. SiteWise gives contractors complete visibility into site operations, costs and profitability." />
+  <meta name="keywords" content="construction site operating system, construction expense management India, construction cost tracking app, site expense tracker, construction accounting software, material cost tracking, labour payment management, construction ledger app, contractor expense app, vendor bill tracker, running account bills, RA bill software, site progress tracking, construction budget tracker, construction ERP India" />
+  <meta name="author" content="SiteWise" />
   <meta name="geo.region" content="IN" />
   <meta name="geo.placename" content="India" />
   <meta name="language" content="en-IN" />
@@ -17,90 +17,152 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://sitewise.in/" />
-  <meta property="og:title" content="SiteWise - Construction Expense Management App for India" />
-  <meta property="og:description" content="Track construction expenses, material costs, labor payments, and site budgets with ease. Free expense management software for Indian contractors and builders." />
-  <meta property="og:image" content="https://sitewise.in/og-image.jpg" />
+  <meta property="og:title" content="Know Where Every Rupee Goes On Every Construction Site" />
+  <meta property="og:description" content="Materials. Labour. Vendor bills. Cash advances. SiteWise gives builders and contractors one place to manage every site in real time." />
+  <meta property="og:image" content="https://sitewise.in/og-image.png" />
   <meta property="og:locale" content="en_IN" />
   <meta property="og:site_name" content="SiteWise" />
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://sitewise.in/" />
-  <meta property="twitter:title" content="SiteWise - Construction Expense Management App for India" />
-  <meta property="twitter:description" content="Track construction expenses, material costs, labor payments, and site budgets with ease. Free expense management software for Indian contractors and builders." />
-  <meta property="twitter:image" content="https://sitewise.in/og-image.jpg" />
+  <meta property="twitter:title" content="Know Where Every Rupee Goes On Every Construction Site" />
+  <meta property="twitter:description" content="Materials. Labour. Vendor bills. Cash advances. SiteWise gives builders and contractors one place to manage every site in real time." />
+  <meta property="twitter:image" content="https://sitewise.in/og-image.png" />
 
-  <!-- Favicon -->
+  <!-- Favicon — Sitewise mark -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
-  <!-- DNS Prefetch and Preconnect for external resources -->
+  <!-- Fonts — loaded non-blocking (print->all swap) so they never block first paint.
+       Trimmed to weights actually used. display=swap shows fallback text immediately. -->
   <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
   <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+  </noscript>
 
-  <!-- Web font optimization - using system fonts first -->
+  <!-- Critical CSS for initial paint (before the bundle loads) — brand cream/ink -->
   <style>
-    /* Prevent FOIT (Flash of Invisible Text) */
-    @font-face {
-      font-family: 'system-ui';
-      font-display: swap;
-    }
-
-    /* Critical CSS for initial render */
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background: #FAFAF7;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
-
-    #app {
-      min-height: 100vh;
-    }
-
-    /* Loading spinner for initial load */
+    #app { min-height: 100vh; }
     .loading-screen {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      inset: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: white;
+      background: #FAFAF7;
       z-index: 9999;
     }
-
     .spinner {
-      width: 50px;
-      height: 50px;
-      border: 3px solid #f3f4f6;
-      border-top-color: #3b82f6;
+      width: 44px;
+      height: 44px;
+      border: 3px solid #EDE9E1;
+      border-top-color: #FFB800;
       border-radius: 50%;
-      animation: spin 1s linear infinite;
+      animation: spin 0.8s linear infinite;
     }
-
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-
+    @keyframes spin { to { transform: rotate(360deg); } }
     @media (prefers-color-scheme: dark) {
-      .loading-screen {
-        background: #111827;
-      }
-      .spinner {
-        border-color: #374151;
-        border-top-color: #60a5fa;
-      }
+      body { background: #0A0E0D; }
+      .loading-screen { background: #0A0E0D; }
+      .spinner { border-color: #1F2625; border-top-color: #FFB800; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .spinner { animation: none; }
     }
   </style>
 
-  <title>SiteWise - Construction Expense Management App India | Track Site Costs & Budgets</title>
+  <title>SiteWise | Know Where Every Rupee Goes On Every Construction Site</title>
+
+  <!-- Structured data — Organization, WebSite, SoftwareApplication (site-wide) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "SiteWise",
+        "url": "https://sitewise.in",
+        "logo": "https://sitewise.in/logo/sitewise-mark.svg",
+        "description": "Construction site operating system for Indian contractors and builders — materials, labour, expenses, vendor payments, budgets and site progress in one place.",
+        "sameAs": ["https://github.com/site-wise/app"],
+        "address": { "@type": "PostalAddress", "addressCountry": "IN" },
+        "contactPoint": { "@type": "ContactPoint", "contactType": "customer support", "url": "https://app.sitewise.in/login" }
+      },
+      {
+        "@type": "WebSite",
+        "name": "SiteWise",
+        "url": "https://sitewise.in",
+        "description": "Construction site operating system for managing materials, labour, expenses, vendor bills, budgets and project progress.",
+        "inLanguage": "en-IN"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "SiteWise",
+        "applicationCategory": "BusinessApplication",
+        "applicationSubCategory": "Construction Management Software",
+        "operatingSystem": "Web, Android, iOS",
+        "url": "https://sitewise.in",
+        "screenshot": "https://sitewise.in/og-image.png",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+        "description": "Construction site operating system for managing materials, labour, expenses, vendor payments, budgets and project execution. One place for Indian contractors and builders to run every site.",
+        "featureList": [
+          "Material cost & delivery tracking",
+          "Labour payment management",
+          "Vendor bills & running account (RA) bills",
+          "Construction ledger (khata)",
+          "Site progress & milestone tracking",
+          "Multi-site budget monitoring",
+          "Multi-user collaboration",
+          "Multi-language support",
+          "AI-powered insights (roadmap)",
+          "GST-ready financial reports"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Structured data — FAQ (high-intent construction operations queries) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is the best software for construction cost tracking?", "acceptedAnswer": { "@type": "Answer", "text": "SiteWise is purpose-built for construction cost tracking in India. It records materials, labour, vendor bills and cash expenses per site and shows live budget versus actual spend, so contractors always know where the money went." } },
+      { "@type": "Question", "name": "How do I manage labour payments across multiple construction sites?", "acceptedAnswer": { "@type": "Answer", "text": "SiteWise tracks daily wages, advances and contractor bills for every site in one place, so you can record mazdoor and thekedaar payments on the spot and reconcile them at month-end without spreadsheets." } },
+      { "@type": "Question", "name": "How do contractors track site expenses?", "acceptedAnswer": { "@type": "Answer", "text": "Contractors log materials, labour, vendor bills, petty cash and advances from their phone as they happen. SiteWise totals them by site, vendor and category in real time and exports GST-ready reports." } },
+      { "@type": "Question", "name": "How do I manage progress-based payments on a construction project?", "acceptedAnswer": { "@type": "Answer", "text": "SiteWise tracks work completion against milestones, quantities and project progress so contractors and owners can verify completed work before releasing payments." } },
+      { "@type": "Question", "name": "How can I verify contractor progress before approving an invoice?", "acceptedAnswer": { "@type": "Answer", "text": "SiteWise provides progress tracking, milestone verification and project records that help teams validate completed work before processing payments." } },
+      { "@type": "Question", "name": "How do builders track contractor running bills?", "acceptedAnswer": { "@type": "Answer", "text": "SiteWise helps builders manage running bills, completed quantities, previous certifications, retention amounts and payment approvals from a single platform." } },
+      { "@type": "Question", "name": "What software helps manage RA Bills and progress payments?", "acceptedAnswer": { "@type": "Answer", "text": "SiteWise simplifies Running Account (RA) bills by linking project progress, completed work quantities and payment certifications to contractor invoices." } },
+      { "@type": "Question", "name": "How do I prevent overpayment to contractors?", "acceptedAnswer": { "@type": "Answer", "text": "SiteWise compares approved work progress, quantities and historical payments to ensure payments are released only for completed and verified work." } },
+      { "@type": "Question", "name": "How can project owners track milestone-based payments?", "acceptedAnswer": { "@type": "Answer", "text": "SiteWise allows owners to define milestones, monitor completion status and release payments according to actual project progress." } },
+      { "@type": "Question", "name": "How do I track work completed versus money spent on a construction project?", "acceptedAnswer": { "@type": "Answer", "text": "SiteWise connects project expenses, labour costs, material consumption and work progress to provide visibility into earned value and project performance." } },
+      { "@type": "Question", "name": "How do I certify construction work for payment?", "acceptedAnswer": { "@type": "Answer", "text": "SiteWise maintains progress records, quantity measurements and project documentation that support payment certification workflows." } },
+      { "@type": "Question", "name": "How do I verify construction material deliveries on site?", "acceptedAnswer": { "@type": "Answer", "text": "SiteWise records delivery photos, quantities, timestamps and supplier information, creating a verifiable record of materials received at the construction site." } },
+      { "@type": "Question", "name": "How can I reduce material theft on construction projects?", "acceptedAnswer": { "@type": "Answer", "text": "SiteWise creates an auditable record of material deliveries, helping project teams identify shortages, discrepancies and potential pilferage before materials are consumed." } },
+      { "@type": "Question", "name": "How do contractors track delivered materials?", "acceptedAnswer": { "@type": "Answer", "text": "SiteWise links supplier deliveries, delivery photos, quantities received and project records so contractors can track materials from arrival through consumption." } },
+      { "@type": "Question", "name": "How can I prove what materials arrived on site?", "acceptedAnswer": { "@type": "Answer", "text": "SiteWise stores photo evidence, delivery records and timestamps, providing a permanent audit trail for every material delivery." } },
+      { "@type": "Question", "name": "How do I identify delivery shortages before approving payment?", "acceptedAnswer": { "@type": "Answer", "text": "SiteWise allows site teams to compare delivered quantities, photos and supplier records before accepting materials or releasing payments." } }
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- Loading screen -->
@@ -112,12 +174,12 @@
 
   <!-- Remove loading screen when app is ready -->
   <script>
-    window.addEventListener('load', function() {
+    window.addEventListener('load', function () {
       const loading = document.getElementById('loading');
       if (loading) {
         loading.style.opacity = '0';
         loading.style.transition = 'opacity 0.3s';
-        setTimeout(() => loading.remove(), 300);
+        setTimeout(function () { loading.remove(); }, 300);
       }
     });
   </script>

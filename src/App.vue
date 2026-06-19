@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-500">
+  <div class="min-h-screen bg-cream dark:bg-ink text-ink dark:text-cream">
     <!-- Navigation -->
     <NavHeader />
     

@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#FFB800" opacity="0.07" />
+    </pattern>
+  </defs>
+
+  <!-- Ink background + blueprint dot grid -->
+  <rect width="1200" height="630" fill="#0A0E0D" />
+  <rect width="1200" height="630" fill="url(#dots)" />
+  <rect x="0" y="624" width="1200" height="6" fill="#FFB800" />
+
+  <!-- Brand mark + wordmark -->
+  <g transform="translate(64, 50)">
+    <g transform="scale(0.74)">
+      <g stroke="#FAFAF7" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter" fill="none">
+        <line x1="22" y1="14" x2="22" y2="46"></line>
+        <line x1="10" y1="18" x2="46" y2="18"></line>
+        <line x1="22" y1="10" x2="44" y2="18"></line>
+        <line x1="38" y1="18" x2="38" y2="32"></line>
+        <line x1="14" y1="46" x2="30" y2="46"></line>
+      </g>
+      <rect x="35" y="32" width="6" height="5" fill="#FFB800"></rect>
+      <rect x="19" y="10" width="6" height="4" fill="#FFB800"></rect>
+    </g>
+    <text x="55" y="36" font-family="DejaVu Sans" font-size="28" font-weight="700" letter-spacing="-0.02em" fill="#FAFAF7">Sitewise</text>
+  </g>
+
+  <!-- Eyebrow -->
+  <text x="64" y="146" font-family="DejaVu Sans" font-size="18" font-weight="700" letter-spacing="0.16em" fill="#FFB800">THE CONSTRUCTION SITE OPERATING SYSTEM</text>
+
+  <!-- Headline -->
+  <g font-family="DejaVu Sans" font-weight="700" font-size="50" letter-spacing="-0.02em">
+    <text x="62" y="212" fill="#FAFAF7">No more WhatsApp hunts.</text>
+    <text x="62" y="270" fill="#FFB800">No more Excel everyone edits.</text>
+  </g>
+  <text x="64" y="314" font-family="DejaVu Sans" font-size="21" fill="#A8A29E">Run every site in one place — materials, labour, vendors and progress.</text>
+
+  <!-- "Before" chips, crossed out -->
+  <g font-family="DejaVu Sans">
+    <!-- chip template: muted card + clay strikethrough -->
+    <g transform="translate(64, 366)">
+      <rect width="500" height="52" rx="10" fill="#13191A" stroke="#2A3231" stroke-width="1" />
+      <text x="22" y="33" font-size="19" font-weight="700" fill="#78716C">WhatsApp</text>
+      <text x="170" y="33" font-size="17" fill="#57534E">"paisa bhej diya?" · scroll · scroll</text>
+      <line x1="14" y1="26" x2="486" y2="26" stroke="#E8743C" stroke-width="2.5" />
+    </g>
+    <g transform="translate(64, 430)">
+      <rect width="500" height="52" rx="10" fill="#13191A" stroke="#2A3231" stroke-width="1" />
+      <text x="22" y="33" font-size="19" font-weight="700" fill="#78716C">Excel</text>
+      <text x="170" y="33" font-size="17" fill="#57534E">kharcha_final_v3.xlsx · who edited?</text>
+      <line x1="14" y1="26" x2="486" y2="26" stroke="#E8743C" stroke-width="2.5" />
+    </g>
+    <g transform="translate(64, 494)">
+      <rect width="500" height="52" rx="10" fill="#13191A" stroke="#2A3231" stroke-width="1" />
+      <text x="22" y="33" font-size="19" font-weight="700" fill="#78716C">Notebook</text>
+      <text x="170" y="33" font-size="17" fill="#57534E">torn page · half the entries lost</text>
+      <line x1="14" y1="26" x2="486" y2="26" stroke="#E8743C" stroke-width="2.5" />
+    </g>
+  </g>
+
+  <!-- Arrow -->
+  <text x="592" y="470" font-family="DejaVu Sans" font-size="46" font-weight="700" fill="#FFB800">&#8594;</text>
+
+  <!-- "After" — Sitewise card -->
+  <g transform="translate(660, 366)">
+    <rect width="476" height="180" rx="16" fill="#1F2625" stroke="#2A3231" stroke-width="1" />
+    <rect x="0" y="0" width="6" height="180" rx="3" fill="#FFB800" />
+    <g transform="translate(30, 30)">
+      <g transform="scale(0.6)">
+        <g stroke="#FAFAF7" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter" fill="none">
+          <line x1="22" y1="14" x2="22" y2="46"></line>
+          <line x1="10" y1="18" x2="46" y2="18"></line>
+          <line x1="22" y1="10" x2="44" y2="18"></line>
+          <line x1="38" y1="18" x2="38" y2="32"></line>
+          <line x1="14" y1="46" x2="30" y2="46"></line>
+        </g>
+        <rect x="35" y="32" width="6" height="5" fill="#FFB800"></rect>
+        <rect x="19" y="10" width="6" height="4" fill="#FFB800"></rect>
+      </g>
+      <text x="44" y="28" font-family="DejaVu Sans" font-size="22" font-weight="700" fill="#FAFAF7">Sitewise</text>
+    </g>
+    <text x="30" y="108" font-family="DejaVu Sans" font-size="34" font-weight="700" fill="#FAFAF7">One live site view.</text>
+    <text x="30" y="146" font-family="DejaVu Sans" font-size="19" fill="#A8A29E">Everyone sees the same site, live.</text>
+  </g>
+
+  <!-- Footer line -->
+  <text x="64" y="600" font-family="DejaVu Sans" font-size="18" fill="#78716C">Materials · Labour · Vendors · Site progress — one system, every site.</text>
+  <text x="1136" y="600" text-anchor="end" font-family="DejaVu Sans" font-size="18" font-weight="700" fill="#A8A29E">sitewise.in</text>
+</svg>

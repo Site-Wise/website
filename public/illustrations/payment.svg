@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" fill="none">
+  <rect width="240" height="200" fill="#FAFAF7"></rect>
+  <ellipse cx="120" cy="170" rx="70" ry="6" fill="#EDE9E1"></ellipse>
+  <g>
+    <ellipse cx="120" cy="155" rx="60" ry="14" fill="#FFB800" stroke="#0A0E0D" stroke-width="2"></ellipse>
+    <ellipse cx="120" cy="135" rx="60" ry="14" fill="#FFB800" stroke="#0A0E0D" stroke-width="2"></ellipse>
+    <ellipse cx="120" cy="115" rx="60" ry="14" fill="#FFB800" stroke="#0A0E0D" stroke-width="2"></ellipse>
+    <ellipse cx="120" cy="95" rx="60" ry="14" fill="#FFB800" stroke="#0A0E0D" stroke-width="2"></ellipse>
+    <ellipse cx="120" cy="75" rx="60" ry="14" fill="#FFB800" stroke="#0A0E0D" stroke-width="2"></ellipse>
+    <ellipse cx="120" cy="60" rx="60" ry="14" fill="#FFB800" stroke="#0A0E0D" stroke-width="2"></ellipse>
+    <text x="120" y="68" font-family="Space Grotesk, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#0A0E0D">₹</text>
+  </g>
+</svg>
